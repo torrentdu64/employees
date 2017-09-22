@@ -7,9 +7,10 @@ import { image, helpers} from 'faker';
 
 Meteor.startup( () => {
     const numberRecords = Employees.find({}).count();
+    console.log(numberRecords);
     if (!numberRecords) {
-        _.time(5000, () => {
-              const {email, name, phone } = helpers.createCard();
+        _.times(5000, () => {
+              const {name, email, phone } = helpers.createCard();
               Employees.insert({
                   name,
                   email,
