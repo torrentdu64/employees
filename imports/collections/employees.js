@@ -1,4 +1,4 @@
 import { Mongo } from 'meteor/mongo';
 
 
-export const Employees = new Mongo.collection('employees')
+export const Employees = new Mongo.Collection('employees')
