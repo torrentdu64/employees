@@ -19,4 +19,8 @@ Meteor.startup( () => {
               });
         });
     }
+
+    Meteor.publish('employee' , () => {
+      return Employees.find({}, {limit: 20});
+    })
 });
